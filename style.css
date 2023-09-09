@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family:monospace
+}
+main{
+    
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+.outer-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.image-container{
+    height: 20rem;
+    width: 20rem;
+}
+.image-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
