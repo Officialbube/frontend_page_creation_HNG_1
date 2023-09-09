@@ -8,7 +8,9 @@ body{
     width: 100vw;
     font-size: 1.2rem;
     font-weight: 700;
-    font-family:monospace
+    font-family:monospace;
+    padding: 2rem;
+    
 }
 main{
     
