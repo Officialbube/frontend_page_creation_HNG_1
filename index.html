@@ -26,11 +26,11 @@
         </div>
         <p>
           Current Day of the Week:
-          <span data-testid="currentDayOfTheWeek" id="dayOfTheWeek"></span>
+          <span data-testid="currentDayOfTheWeek" ></span>
         </p>
         <p>
           Current UTC Time:
-          <span data-testid="currentUTCTime" id="utcTime"></span>
+          <span data-testid="currentUTCTime" ></span>
         </p>
         <p>Track: <span data-testid="myTrack">Frontend</span></p>
         <p>
@@ -38,17 +38,18 @@
           <a
             href="https://github.com/Officialbube/frontend_page_creation_HNG_1"
             data-testid="githubURL"
+            
           >
-            Source Code
+            GitHub Repository
           </a>
         </p>
       </div>
     </main>
     <script>
-      const dayOfTheWeek = document.getElementById("dayOfTheWeek");
-      const utcTime = document.getElementById("utcTime");
-
+      const dayOfTheWeek = document.querySelector('[data-testid="currentDayOfTheWeek"]');
+      
       const today = new Date();
+      const currentTime = Date.now()
       const day = today.getDay();
       const dayList = [
         "Sunday",
@@ -61,8 +62,12 @@
       ];
       dayOfTheWeek.innerHTML = dayList[day];
 
-      const utcMilliseconds = today.getUTCMilliseconds();
-      utcTime.textContent = `${utcMilliseconds} msecs`;
+     
+      const updateTime = () => {
+        const newTime = Date.now();
+        document.querySelector('[data-testid="currentUTCTime"]').textContent = `${newTime} mSecs`;
+      }
+      setInterval(updateTime, 1);
     </script>
   </body>
 </html>
