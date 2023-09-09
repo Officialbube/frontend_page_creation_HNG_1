@@ -10,46 +10,38 @@
   </head>
   <body>
     <main>
-      <div class="outer-container">
-        <p>
-          Slack Name: <span data-testid="slackUserName">Ebube Nkere Ebube</span>
-        </p>
-        <div>
-          <p>Slack Display Picture:</p>
-          <div class="image-container">
-            <img
-              src="/image/myPhoto.jpg"
-              alt="Ebube Nkere Ebube"
-              data-testid="slackDisplayImage"
-            />
-          </div>
-        </div>
-        <p>
-          Current Day of the Week:
-          <span data-testid="currentDayOfTheWeek" ></span>
-        </p>
-        <p>
-          Current UTC Time:
-          <span data-testid="currentUTCTime" ></span>
-        </p>
-        <p>Track: <span data-testid="myTrack">Frontend</span></p>
-        <p>
-          GitHub URL:
-          <a
-            href="https://github.com/Officialbube/frontend_page_creation_HNG_1"
-            data-testid="githubURL"
-            
-          >
-            GitHub Repository
-          </a>
-        </p>
-      </div>
+      <h1 data-testid="slackUserName">Ebube Nkere Ebube</h1>
+      <img
+        src="/image/myPhoto.jpg"
+        alt="Ebube Nkere Ebube"
+        data-testid="slackDisplayImage"
+      />
+      <p>
+        Current Day of the Week:
+        <span data-testid="currentDayOfTheWeek"></span>
+      </p>
+      <p>
+        Current UTC Time:
+        <span data-testid="currentUTCTime"></span>
+      </p>
+      <p>Track: <span data-testid="myTrack">Frontend</span></p>
+      <p>
+        GitHub URL:
+        <a
+          href="https://github.com/Officialbube/frontend_page_creation_HNG_1"
+          data-testid="githubURL"
+        >
+          GitHub Repository
+        </a>
+      </p>
     </main>
     <script>
-      const dayOfTheWeek = document.querySelector('[data-testid="currentDayOfTheWeek"]');
-      
+      const dayOfTheWeek = document.querySelector(
+        '[data-testid="currentDayOfTheWeek"]'
+      );
+
       const today = new Date();
-      const currentTime = Date.now()
+      const currentTime = Date.now();
       const day = today.getDay();
       const dayList = [
         "Sunday",
@@ -62,11 +54,12 @@
       ];
       dayOfTheWeek.innerHTML = dayList[day];
 
-     
       const updateTime = () => {
         const newTime = Date.now();
-        document.querySelector('[data-testid="currentUTCTime"]').textContent = `${newTime} mSecs`;
-      }
+        document.querySelector(
+          '[data-testid="currentUTCTime"]'
+        ).textContent = `${newTime} mSecs`;
+      };
       setInterval(updateTime, 1);
     </script>
   </body>
