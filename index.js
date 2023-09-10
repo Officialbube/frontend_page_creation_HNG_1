@@ -14,12 +14,12 @@ const dayOfTheWeek = document.querySelector(
     "Friday",
     "Saturday",
   ];
-  dayOfTheWeek.innerHTML = `Current Day of the Week: ${dayList[day]}`;
+  dayOfTheWeek.textContent = dayList[day];
 
   const updateTime = () => {
     const newTime = Date.now();
     document.querySelector(
       '[data-testid="currentUTCTime"]'
-    ).textContent = `Current UTC Time: ${newTime} mSecs`;
+    ).textContent = newTime;
   };
   setInterval(updateTime, 1);
