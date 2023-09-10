@@ -25,15 +25,14 @@
         <p data-testid="currentUTCTime"></p>
       </p>
       <p data-testid="myTrack">Frontend</p>
-      <p>
-        GitHub URL:
+      
         <a
           href="https://github.com/Officialbube/frontend_page_creation_HNG_1"
           data-testid="githubURL"
         >
           GitHub URL
         </a>
-      </p>
+      
     </main>
     <script>
       const dayOfTheWeek = document.querySelector(
@@ -58,7 +57,7 @@
         const newTime = Date.now();
         document.querySelector(
           '[data-testid="currentUTCTime"]'
-        ).textContent = `${newTime} mSecs`;
+        ).textContent = newTime;
       };
       setInterval(updateTime, 1);
     </script>
